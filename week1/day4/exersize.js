@@ -5,25 +5,39 @@
 //If the first parameter is an array, it should loop over the array's elements and call the callback for each one. The array element should be the first parameter passed to the callback and the index should be the second.
 
 function each(objArr, callback) {
-    if (objArr[0] == typeof "object") {
-        for (var key in objArr) {
-            return key.hasOwnProperty;
+    if (objArr == typeof "array") {
+        for (let i = 0; i < objArr.length; i++) {
+            callback(objArr[i]);
         }
-    } else if (objArr[0] == typeof "array") {
-        for (var key in objArr) {
-            return callback;
+    } else {
+        for (let key in objArr) {
+            callback(objArr[key], key);
         }
     }
 }
 
+each(
+    {
+        a: 1,
+        b: 2,
+    },
+    function (val, name) {
+        console.log("The value of " + name + " is " + val);
+    }
+);
+
+each(["a", "b"], function (val, idx) {
+    console.log("The value of item " + idx + " is " + val);
+});
+
 //Write a function that takes an array as a parameter and returns a new array containing all of the items that are in the array that was passed in but in reverse order. Unlike the reverse method that all arrays have, this function should leave the original array unchanged.
 
-let newArr = [];
-
 function reverse(arr) {
-    arr.forEach((element) => {
-        newArr.unshift(element);
-    });
+    let newArr = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        newArr.push(arr[i]);
+    }
+    return newArr;
 }
 
 var originalArray = [1, 2, 3];
@@ -31,6 +45,7 @@ var reversedArray = reverse(originalArray);
 
 console.log(originalArray);
 console.log(reversedArray);
+
 //Write a function called getLessThanZero that expects an array of numbers to be passed to it and returns a new array containing only those numbers from the array that was passed in that are less than zero.
 
 function getLessThanZero(arr) {
