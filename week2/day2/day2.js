@@ -12,7 +12,7 @@
 
     var text = document.getElementsByClassName("text");
     console.log("text: ", text);
-    
+
     //EXERSIZE 3
 
     function creation() {
