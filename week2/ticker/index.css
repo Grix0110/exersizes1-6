@@ -26,3 +26,7 @@
 #headlines a:link {
     color: royalblue;
 }
+
+#headlines:hover {
+    color: red;
+}

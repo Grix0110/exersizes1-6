@@ -1,0 +1,15 @@
+body {
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+#box {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    border: solid salmon;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

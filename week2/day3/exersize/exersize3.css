@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: antiquewhite;
+}
+
+#box {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border: solid black 5px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}

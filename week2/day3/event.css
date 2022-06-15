@@ -1,0 +1,10 @@
+body {
+    height: 100vh;
+}
+
+.box {
+    height: 100px;
+    width: 100px;
+    background-color: blanchedalmond;
+    margin: 100px;
+}
