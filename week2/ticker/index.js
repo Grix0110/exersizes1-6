@@ -2,8 +2,7 @@
     var ticker = document.getElementById("headlines");
     var left = ticker.offsetLeft;
     var links = document.getElementsByTagName("a");
-    // var animId;
-    // var stopId;
+    var animId;
 
     function moveHead() {
         left--;
@@ -17,19 +16,22 @@
 
         ticker.style.left = left + "px";
 
-        requestAnimationFrame(moveHead);
-
-        // cancelAnimationFrame(moveHead);
-
-        // ticker.addeventListener("mouseenter", function (e) {
-        //     console.log("ENTER");
-        //     e.stopId;
-        // });
-
-        // ticker.addeventListener("mouseleave", function (e) {
-        //     console.log("LEAVE");
-        //     e.animId;
-        // });
+        animId = requestAnimationFrame(moveHead);
     }
     moveHead();
+
+    document
+        .getElementById("ticker")
+        .addEventListener("mouseenter", function () {
+            console.log("mouse enters");
+            cancelAnimationFrame(animId);
+            console.log(animId);
+        });
+
+    document
+        .getElementById("ticker")
+        .addEventListener("mouseleave", function () {
+            console.log(animId);
+            requestAnimationFrame(moveHead);
+        });
 })();
