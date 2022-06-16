@@ -1,0 +1,8 @@
+body {
+    background-color: lightblue;
+}
+
+#canvas {
+    background-color: whitesmoke;
+    border: dashed darkcyan 5px;
+}

@@ -15,4 +15,5 @@ body {
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     border: dashed lightcoral 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -3,7 +3,7 @@ var text =
 
 var array = text.split("");
 
-var i = -1;
+var i = 0;
 
 var insertText = document.getElementsByTagName("textarea")[0];
 
