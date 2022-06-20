@@ -1,0 +1,43 @@
+
+
+.main {
+    display: grid;
+    gap: 5px;
+}
+
+.main div {
+    display: grid;
+    grid-template: 2 / 2;
+}
+
+.box1 {
+    background-color: grey;
+}
+
+.box2 {
+    background-color: black;
+}
+
+.box3 {
+    background-color: blue;
+}
+
+.box4 {
+    background-color: purple;
+}
+
+.box1in {
+    background-color: goldenrod;
+}
+
+.box2in {
+    background-color: yellow;
+}
+
+.box3in {
+    background-color: green;
+}
+
+.box4in {
+    background-color: pink;
+}

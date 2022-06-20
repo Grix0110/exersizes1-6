@@ -7,7 +7,7 @@
     var x = 300,
         y = 175,
         radius = 50,
-        speed = 50;
+        speed = 10;
 
     // Head
     function head() {

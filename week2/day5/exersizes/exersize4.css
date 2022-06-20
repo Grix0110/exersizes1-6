@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    gap: 10px;
+}
+body > div {
+    display: flex;
+    min-height: 200px;
+    min-width: 200px;
+}
+.div1 {
+    background-color: grey;
+    flex-direction: row-reverse;
+}
+.div2 {
+    background-color: black;
+    flex-direction: row-reverse;
+}
+.div3 {
+    background-color: blue;
+}
+.div4 {
+    background-color: purple;
+}
+.item {
+    min-height: 100px;
+    min-width: 100px;
+}
+#item1 {
+    background-color: goldenrod;
+    align-self: flex-start;
+}
+#item2 {
+    background-color: yellow;
+    align-self: flex-end;
+}
+#item3 {
+    background-color: green;
+    align-self: flex-end;
+}
+#item4 {
+    background-color: pink;
+    align-self: flex-start;
+}

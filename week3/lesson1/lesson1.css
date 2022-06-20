@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+}
+body {
+    background-color: aquamarine;
+}
+
+/* .container {
+
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 150px 1fr 150px 50px;
+    grid-template-rows: 100px 1fr 100px;
+    gap: 10px;
+}
+
+.head {
+    background-color: powderblue;
+    grid-column: 1 / 4;
+}
+
+.main {
+    background-color: lavenderblush;
+}
+
+.foot {
+    background-color: powderblue;
+    grid-column: -4 / -1;
+}
+
+.right {
+    background-color: plum;
+}
+.left {
+    background-color: plum;
+}
+
+.add {
+    background-color: lightsalmon;
+} */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-auto-rows: 300px;
+    /* grid-auto-flow: column; */
+    gap: 10px;
+}
+
+.container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    background-color: indianred;
+}
+.blue {
+    background-color: lightskyblue;
+}
+
+.orange {
+    background-color: orange;
+    grid-row: 2;
+    grid-column: 3;
+    z-index: 0;
+}
+
+.pink {
+    background-color: pink;
+    grid-column: 2 / span 3;
+    grid-row: 2 / span 2;
+}
+.green {
+    background-color: forestgreen;
+    /* grid-row: 2 / 3;
+    grid-column: 2 / 3; */
+    grid-area: 2 / 2 / 4 / 3;
+}
+.black {
+    background-color: black;
+    color: white;
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+}
+.yellow {
+    background-color: yellow;
+}
+.purple {
+    background-color: purple;
+    grid-row: 2;
+}

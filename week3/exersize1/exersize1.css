@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 50px 1fr 25px;
+}
+
+header {
+    background-color: goldenrod;
+}
+
+main {
+    background-color: grey;
+}
+
+footer {
+    background-color: pink;
+}
