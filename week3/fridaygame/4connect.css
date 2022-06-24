@@ -1,0 +1,45 @@
+body {
+    /* background-color: lightcoral; */
+}
+
+.game {
+    display: flex;
+    
+    
+}
+
+.slot {
+    height: 100px;
+    width: 100px;
+    /* background-color: royalblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: outset 3px lightblue;
+    overflow: hidden;
+    margin: 2px;
+
+}
+
+.hole {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: inset 33px royalblue;
+    flex-shrink: 0;
+    z-index: -1;
+}
+
+.player1 {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.player2 {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: yellow;
+}
