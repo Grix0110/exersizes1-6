@@ -1,13 +1,31 @@
 (function () {
+    // AJAX Request //
+    $.ajax({
+        url: "/ticker.json",
+        method: "GET",
+        success: function (data) {
+            createLink(data);
+        },
+    });
+    
+    function createLink(data) {
+        var html = "";
+        for (var jason of data) {
+            html += '<a href="' + jason.url + '">' + jason.text + "</a>";
+        }
+        $("#headlines").html(html);
+        moveHead();
+    }
+
     var ticker = $("#headlines");
     var left = ticker.offset().left;
-    var links = $("a");
     var animId;
-
+    
     function moveHead() {
+        var links = $("a");
         animId = requestAnimationFrame(moveHead);
 
-        left--;
+        left-=5;
 
         if (left <= -links.eq(0).outerWidth()) {
             left += links.eq(0).outerWidth();
@@ -17,7 +35,7 @@
         ticker.css({ left: left + "px" });
     }
 
-    moveHead();
+    // moveHead();
 
     $("#headlines")
         .on("mouseenter", function () {
