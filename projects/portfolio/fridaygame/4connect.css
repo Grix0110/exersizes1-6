@@ -1,0 +1,194 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(to right, #ff00005e, #ffc80060);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: space-evenly;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+.playerOne {
+    height: 10vh;
+    width: 50%;
+    background-color: #ffc600;
+    text-align: center;
+}
+.playerTwo {
+    height: 10vh;
+    width: 50%;
+    background-color: red;
+    text-align: center;
+}
+p {
+    font-family: monospace;
+    font-weight: 400;
+    font-size: 25px;
+}
+
+.game {
+    display: flex;
+    justify-items: start;
+    border: solid 2px black;
+    border-radius: 7.125%;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.slot {
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.2);
+}
+
+.hole {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: outset 33px #5800ff;
+    flex-shrink: 0;
+    z-index: -1;
+}
+
+.player1 {
+    background-color: red;
+}
+
+.player2 {
+    background-color: #ffc600;
+}
+
+/*/////////// ANIMATIONEN /////////////*/
+.background {
+    animation-name: gradient;
+    animation-duration: 200ms;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: 10;
+    transition: background 2s ease-in-out;
+}
+
+@keyframes gradient {
+from {
+    background-image: linear-gradient(to right, #ff00005e, #ffc80060);
+}
+to{
+    background-image: linear-gradient(to right, #ffc80060,#ff00005e );
+}
+
+}
+.colorBoard {
+    animation-name: colorchange;
+    animation-duration: 2000ms;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: inherit;
+    transition: border 2s ease-in-out;
+}
+@keyframes colorchange {
+    from {
+        border-color: #ffc600;
+    }
+    to {
+        border-color: red;
+    }
+}
+
+.rotate {
+    animation-name: rotate;
+    animation-duration: 2000ms;
+    animation-timing-function: linear;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@keyframes rotate {
+    0% {
+        transform: perspective(100px) rotateX(0deg);
+    }
+    12.5% {
+        transform: perspective(200px) rotateY(45deg);
+    }
+    25% {
+        transform: perspective(300px) rotateX(90deg);
+    }
+    37.5% {
+        transform: perspective(400px) rotateY(135deg);
+    }
+    50% {
+        transform: perspective(500px) rotateX(180deg);
+    }
+    62.5% {
+        transform: perspective(600px) rotateY(215deg);
+    }
+    75% {
+        transform: perspective(700px) rotateX(270deg);
+    }
+    87.5% {
+        transform: perspective(800px) rotateY(305deg);
+    }
+    100% {
+        transform: perspective(900px) rotateX(360deg);
+    }
+}
+ @keyframes confetti-slow { 
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(25px, 105vh, 0) rotateX(360deg) rotateY(180deg);
+  }
+} 
+@keyframes confetti-medium {
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(100px, 105vh, 0) rotateX(100deg) rotateY(360deg);
+  }
+}
+ @keyframes confetti-fast { 
+  0% {
+    transform: translate3d(0, 0, 0) rotateX(0) rotateY(0);
+  }
+  100% {
+    transform: translate3d(-50px, 105vh, 0) rotateX(10deg) rotateY(250deg);
+  }
+} 
+
+.confetti-container {
+  perspective: 700px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.confetti {
+  position: absolute;
+  z-index: 1;
+  top: -10px;
+  border-radius: 0;
+}
+.confetti--animation-slow {
+  animation: confetti-slow 2.25s linear 1 forwards;
+}
+.confetti--animation-medium {
+  animation: confetti-medium 1.75s linear 1 forwards;
+}
+.confetti--animation-fast {
+  animation: confetti-fast 1.25s linear 1 forwards;
+}  
