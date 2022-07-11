@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+img {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    height: 450px;
+    background-color: white;
+    object-fit: cover;
+}
+
+p {
+    margin-bottom: 5px;
+}
+
+h2 {
+    padding: 20px 10px;
+    background-color: #f0f7ee;
+    font-size: 28px;
+    font-weight: 300;
+    color: #7f032d;
+}
+
+.films-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #2a2e45;
+    color: #eaeaea;
+    margin: 20px;
+    border-radius: 10px;
+    width: 300pt;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card section:last-child {
+    border-bottom: none;
+}
+
+section {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px 0;
+    border-bottom: 1px solid #ff2e63;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.values {
+    color: #fcfc62;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    min-height: 60px;
+}
+
+.properties {
+    text-transform: capitalize;
+}

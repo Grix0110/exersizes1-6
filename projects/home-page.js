@@ -11,16 +11,14 @@ let html = "<h1>Home</h1>";
         for (const item of contents) {
             console.log(item.name);
             if (item.isDirectory()) {
-                console.log("📁");
-                html += `<a href="/portfolio/${item.name}">${item.name}</a>`;
+                html += `<body>
+                <a href="/portfolio/${item.name}"> ${item.name} </a>
+                </body>`;
             }
         }
     });
 })();
 
 module.exports.getHomePage = function () {
-    // Build up the home page here.
-    // 1. Read the content of the projects directory
-    // fs.readdir
     return html;
 };

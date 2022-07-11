@@ -1,0 +1,59 @@
+.oscilator,
+.filter,
+.adsr,
+.efx,
+.master {
+    display: grid;
+    grid-template-rows: 0.1fr 1fr;
+    width: 100%;
+    height: 100%;
+    place-items: start center;
+}
+
+.oscilator,
+.filter,
+.adsr,
+.efx {
+    border-right: 1px dashed whitesmoke;
+    border-radius: 25px;
+}
+
+.drums {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    border-right: 1px dashed white;
+    border-radius: 25px;
+}
+
+.seq {
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+}
+
+.drums,
+.seq {
+    width: 100%;
+    height: 94%;
+    place-items: start center;
+}
+
+select {
+    -moz-padding-start: calc(10px - 3px);
+    cursor: pointer;
+    -webkit-appearance: none;
+    color: white;
+    text-align: center;
+    height: 20px;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    border: none;
+    box-shadow: 1px 1px 5px black;
+}
+
+select:focus {
+    outline-offset: 0px !important;
+    outline: none !important;
+    box-shadow: 0px 1px 0px rgba(255, 255, 255, 0.3),
+        0px -1px 0px rgba(0, 0, 0, 0.7);
+}

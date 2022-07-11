@@ -2,6 +2,7 @@ const http = require("http");
 const fs = require("fs");
 const path = require("path");
 const { getHomePage } = require("./home-page.js");
+// const { getMaster } = require("./master.js");
 const PORT = 8080;
 
 // const contentTypes = {
@@ -22,6 +23,7 @@ const server = http.createServer((req, res) => {
     req.on("error", (err) => console.log(err));
     res.on("error", (err) => console.log(err));
 
+    console.log("New Request", process.pid, req.method, req.url);
     console.log("REQUEST RECEIVED", req.url);
 
     // ❌ Unsupported Methods

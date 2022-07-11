@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    background-color: lightgreen;
+}
+
+.container {
+    border: 1px solid red;
+    position: relative;
+    height: 800px;
+    width: 800px;
+    margin-left: 100px;
+    max-width: 800;
+}
+
+.container > * {
+    position: absolute;
+}
+
+img {
+    height: 800px;
+    width: 800px;
+    object-fit: cover;
+}
+
+.slider {
+    height: 100%;
+    background-color: black;
+    width: 10px;
+    left: 800px;
+}
+
+.foreground {
+    width: 800px;
+    overflow: hidden;
+}

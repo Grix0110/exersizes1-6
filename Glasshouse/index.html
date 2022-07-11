@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="styleModules.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <nav>
+                <h1>G L A S S H O U S E</h1>
+            </nav>
+            <main>
+                <section id="maincontainer">
+                    <section class="synth">
+                        <div class="oscilator">
+                            <p>O S C</p>
+                            <select name="oscilator" id="oscType">
+                                <option value="sine">Sine</option>
+                                <option value="saw">Sawtooth</option>
+                                <option value="triangle">Triangle</option>
+                                <option value="square">Square</option>
+                            </select>
+                        </div>
+                        <div class="filter">
+                            <p>F i l t e r</p>
+                        </div>
+                        <div class="adsr">
+                            <p>A D S R</p>
+                        </div>
+                        <div class="efx">
+                            <p>E F X</p>
+                        </div>
+                        <div class="master">
+                            <p>M a s t e r</p>
+                        </div>
+                    </section>
+                    <section class="drum">
+                        <div class="drums">
+                            <p>D r u m s</p>
+                        </div>
+                        <div class="seq">
+                            <p>S e q u e n c e r</p>
+                        </div>
+                    </section>
+                </section>
+            </main>
+            <footer>footer</footer>
+        </div>
+
+        <script src="index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.40/Tone.js"></script>
+    </body>
+</html>

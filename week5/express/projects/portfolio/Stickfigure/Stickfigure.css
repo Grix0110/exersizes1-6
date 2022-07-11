@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: blanchedalmond;
+}
+
+#hat {
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    width: 100px;
+    height: 60px;
+    border: solid 8px black;
+    background-color: black;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    transform: rotate(345deg);
+}
+
+#visor {
+    position: absolute;
+    top: 110px;
+    left: 108px;
+    width: 150px;
+    height: 8px;
+    background-color: black;
+    transform: rotate(345deg);
+}
+
+#head {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    border: solid 8px blueviolet;
+    top: 100px;
+    left: 100px;
+    border-radius: 50%;
+}
+
+#body {
+    position: absolute;
+    top: 250px;
+    left: 170px;
+    height: 250px;
+    width: 9px;
+    background-color: red;
+}
+
+.arm {
+    position: absolute;
+    top: 320px;
+    left: 175px;
+    height: 8px;
+    width: 180px;
+    background-color: green;
+}
+
+.arm.right {
+    transform: rotate(315deg);
+    transform-origin: left;
+    animation: slide3 1s alternate infinite;
+}
+
+.arm.left {
+    transform: rotate(225deg);
+    transform-origin: left;
+    animation: slide4 1s alternate infinite;
+}
+
+@keyframes slide3 {
+    0% {
+        transform: rotate(315deg);
+    }
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+@keyframes slide4 {
+    0% {
+        transform: rotate(225deg);
+    }
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+.leg {
+    position: absolute;
+    top: 495px;
+    left: 175px;
+    height: 8px;
+    width: 180px;
+    background-color: blue;
+}
+
+.leg.left {
+    transform: rotate(135deg);
+    transform-origin: left;
+    animation: slide1 1s alternate infinite;
+}
+
+.leg.right {
+    transform: rotate(45deg);
+    transform-origin: left;
+    animation: slide2 1s alternate infinite;
+}
+
+@keyframes slide1 {
+    0% {
+        transform: rotate(45deg);
+    }
+    100% {
+        transform: rotate(135deg);
+    }
+}
+
+@keyframes slide2 {
+    0% {
+        transform: rotate(135deg);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
+}
+

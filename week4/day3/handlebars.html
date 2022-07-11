@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="handlebars.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container"></div>
+        <div class="films-info"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script id="authors" type="text/x-handlebars-template">
+                    {{#authors}}
+                <div class="container">
+                <div class="card">
+                    <img src="{{photo}}" alt="photo of the author" >
+                    <h2>{{name}}</h2>
+        
+                    <section>
+                        <div class="properties">Born:</div>
+                        <div class="values">
+                            <p>{{born}}</p>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="properties">Died:</div>
+                        <div class="values">
+                            <p>{{died}}</p>
+                        </div>
+                    </section>
+                    <section>
+                        <div class="properties">Selected writings:</div>
+                        <div class="values">
+                            {{#selectedWritings}}
+                            <p>{{.}}</p>
+                            {{/selectedWritings}}
+                        </div>
+                    </section>
+                    <section>
+                        <div class="properties">Quote:</div>
+                        <div class="values">
+                            <p>{{quote}}</p>
+                        </div>
+                    </section>
+                </div>
+            </div>
+            {{/authors}}
+        </script>
+        <script src="handlebars.js"></script>
+    </body>
+</html>
