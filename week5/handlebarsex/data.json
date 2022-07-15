@@ -1,0 +1,27 @@
+[
+    {
+        "link": "/fridaygame",
+        "name": "Connect 4",
+        "directory": "fridaygame",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, unde!"
+    },
+    {
+        "link": "/Glasshouse",
+        "name": "Glasshouse",
+        "directory": "Glasshouse",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, unde!"
+
+    },
+    {
+        "link": "/Ticker",
+        "name": "Ticker",
+        "directory": "Ticker",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, unde!"
+    },
+    {
+        "link": "/Panes",
+        "name": "Panes",
+        "directory": "Panes",
+        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, unde!"
+    } 
+]

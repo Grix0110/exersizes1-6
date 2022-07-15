@@ -1,8 +1,16 @@
-<nav>
+{{!-- <nav>
     <a href="/">Home</a>
     <a href="/fridaygame">Connect 4</a>
     <a href="/Glasshouse">Glasshouse</a>
     <a href="/Ticker">Ticker</a>
     <a href="/Panes">Panes</a>
+    <a href="/about">About</a>
+</nav> --}}
+
+<nav>
+    <a href="/">Home</a>
+    {{#data}}
+        <a href="{{link}}">{{name}}</a>
+    {{/data}}
     <a href="/about">About</a>
 </nav>

@@ -1,43 +1,14 @@
 <div class="imageL">
-    <div>
-        <a href="/fridaygame"><img
-                width="200"
-                height="200"
-                src="/fridaygame/screenshot.jpg"
-                alt="4 Connect Screenshot"
-            /></a>
-            <br>
-        <a href="/fridaygame">Connect 4</a>
-    </div>
-    <div>
-        <a href="/Glasshouse"><img
-                width="200"
-                height="200"
-                src="/Glasshouse/screenshot.jpg"
-                alt="Glasshouse Image"
-            /></a>
-            <br>
-        <a href="/Glasshouse">Glasshouse</a>
-
-    </div>
-    <div>
-        <a href="/Ticker"><img
-                width="200"
-                height="200"
-                src="/Ticker/screenshot.jpg"
-                alt="Ticker Image"
-            /></a>
-            <br>
-        <a href="/Ticker">Ticker</a>
-    </div>
-    <div>
-        <a href="/Panes"><img
-                width="200"
-                height="200"
-                src="/Panes/screenshot.jpg"
-                alt="Panes Image"
-            /></a>
-            <br>
-        <a href="/Panes">Panes</a>
-    </div>
+    {{#data}}
+        <div>
+            <a href="/project/{{directory}}/description"><img
+                    width="200"
+                    height="200"
+                    src="/{{directory}}/screenshot.jpg"
+                    alt="{{name}}"
+                /></a>
+            <br />
+            <a href="/project/{{directory}}/description">{{name}}</a>
+        </div>
+    {{/data}}
 </div>

@@ -1,4 +1,6 @@
 const fs = require("fs");
+// const { resolve } = require("path");
+
 
 const filePath = __dirname + "/" + "files";
 
@@ -30,26 +32,26 @@ logSizes(filePath);
 
 ////////////////////////// EXERSIZE 2 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
-const jsonFile = "files.json";
+// const jsonFile = "files.json";
 
-function mapSizes(dirPath) {
-    const contents = fs.readdirSync(dirPath, { withFileTypes: true });
-    let newObject = {};
+// function mapSizes(dirPath) {
+//     const contents = fs.readdirSync(dirPath, { withFileTypes: true });
+//     let newObject = {};
 
-    for (const item of contents) {
-        console.log(item);
-        if (item.isDirectory()) {
-            newObject[item.name] = mapSizes(dirPath + "/" + item.name);
-        } else {
-            const info = fs.statSync(dirPath + "/" + item.name);
-            newObject[item.name] = info.size;
-        }
-    }
-    return newObject;
-}
+//     for (const item of contents) {
+//         console.log(item);
+//         if (item.isDirectory()) {
+//             newObject[item.name] = mapSizes(dirPath + "/" + item.name);
+//         } else {
+//             const info = fs.statSync(dirPath + "/" + item.name);
+//             newObject[item.name] = info.size;
+//         }
+//     }
+//     return newObject;
+// }
 
-const newFile = JSON.stringify(mapSizes(filePath), null, 4);
+// const newFile = JSON.stringify(mapSizes(filePath), null, 4);
 
-fs.writeFileSync(__dirname + "/" + jsonFile, newFile);
+// fs.writeFileSync(__dirname + "/" + jsonFile, newFile);
 
 ///////////////////////// EXERSIZE 3 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
